@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 6f;
+    public GameObject Cam;
+    public float Speed = 6f;
+    public float JumpHeight = 2f;
 
     private Rigidbody body;
     private Vector3 movement;
@@ -23,16 +25,25 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        movement = Vector3.zero;
-        
-        movement.x = Input.GetAxis("Horizontal");
-        movement.z = Input.GetAxis("Vertical");
+        float Horizontal = Input.GetAxis("Horizontal");
+        float Vertical = Input.GetAxis("Vertical");
 
-        if (movement != Vector3.zero)
-            transform.forward = movement;
+        Quaternion newRotation = Cam.transform.rotation;
+        newRotation.z = 0;
+        newRotation.x = 0;
+
+        transform.rotation = newRotation;
+
+        Vector3 newMove = transform.right * Horizontal + transform.forward * Vertical;
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            body.AddForce(Vector3.up * Mathf.Sqrt(JumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
+        }
+
+        body.MovePosition(body.position + newMove * Speed * Time.deltaTime);
     }
 
     private void FixedUpdate() {
-        body.MovePosition(body.position + movement * speed * Time.fixedDeltaTime);
     }
 }
