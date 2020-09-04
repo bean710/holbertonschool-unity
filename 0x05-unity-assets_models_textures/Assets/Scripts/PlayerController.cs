@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public CharacterController characterController;
-    public float speed = 6;
+    public float speed = 6f;
+
+    private Rigidbody body;
+    private Vector3 movement;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        body = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -21,5 +23,16 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
+        movement = Vector3.zero;
+        
+        movement.x = Input.GetAxis("Horizontal");
+        movement.z = Input.GetAxis("Vertical");
+
+        if (movement != Vector3.zero)
+            transform.forward = movement;
+    }
+
+    private void FixedUpdate() {
+        body.MovePosition(body.position + movement * speed * Time.fixedDeltaTime);
     }
 }
