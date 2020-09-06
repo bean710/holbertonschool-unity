@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody body;
     private Vector3 movement;
 
+    private uint cols = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 newMove = transform.right * Horizontal + transform.forward * Vertical;
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && cols > 0)
         {
             body.AddForce(Vector3.up * Mathf.Sqrt(JumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
         }
@@ -44,6 +46,11 @@ public class PlayerController : MonoBehaviour
         body.MovePosition(body.position + newMove * Speed * Time.deltaTime);
     }
 
-    private void FixedUpdate() {
+    private void OnCollisionEnter(Collision other) {
+        cols += 1;
+    }
+
+    private void OnCollisionExit(Collision other) {
+        cols -= 1;
     }
 }
