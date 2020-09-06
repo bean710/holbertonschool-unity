@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
+        CheckFall();
     }
 
     private void Move()
@@ -52,5 +53,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionExit(Collision other) {
         cols -= 1;
+    }
+
+    private void CheckFall()
+    {
+        if (transform.position.y < -30)
+        {
+            transform.position = new Vector3(0, 50, 0);
+        }
     }
 }
