@@ -25,6 +25,9 @@ public class CameraController : MonoBehaviour
         curX += Input.GetAxis("Mouse X") * sensitivity;
         curY += Input.GetAxis("Mouse Y") * sensitivity;
 
+        //curX = Mathf.Clamp(curX, 89, -89);
+        curY = Mathf.Clamp(curY, -7f, 89.9f);
+
         Vector3 direction = new Vector3(0, 0, -distance);
         Quaternion rotation = Quaternion.Euler(curY, curX, 0);
         //transform.position = Vector3.MoveTowards(transform.position, player.transform.position + rotation * direction, rotSpeed * Time.deltaTime);
