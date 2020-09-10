@@ -18,6 +18,7 @@ public class CameraController : MonoBehaviour
     {
         offset = transform.position - player.transform.position;
         distance = Vector3.Distance(transform.position, player.transform.position);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
