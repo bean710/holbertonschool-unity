@@ -109,28 +109,27 @@ public class Tetromino : MonoBehaviour
             }
             else if (Input.GetKeyDown("down"))
             {
-                speed *= 2;
+                speed *= 20;
             }
 
             if (Input.GetKeyUp("down"))
             {
-                speed /= 2;
+                if (speed > 1)
+                    speed /= 20;
             }
         }
     }
 
     public void UpdateGhost()
     {
-        Debug.Log($"Updating as ghost: {(ghost ? "true" : "false")}");
-        if (moving)
+        if (moving && !isGhost)
         {
             if (ghost == null)
             {
-                Debug.Log("New ghost");
                 ghost = Instantiate(this, transform.position, transform.rotation);
                 ghost.isGhost = true;
                 foreach (Transform child in ghost.transform)
-                    child.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f);
+                    child.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.3f);
             }
 
             ghost.transform.position = transform.position;
