@@ -13,17 +13,25 @@ public class PlayerController : MonoBehaviour
 
     private uint cols = 0;
 
+    private bool paused = false;
+
+    private CameraController cameraController;
+
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody>();
+        cameraController = Cam.GetComponent<CameraController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
-        CheckFall();
+        if (!paused)
+        {
+            Move();
+            CheckFall();
+        }
     }
 
     private void Move()
@@ -61,5 +69,11 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(0, 50, 0);
         }
+    }
+
+    public void TogglePause()
+    {
+        paused = !paused;
+        cameraController.TogglePause();
     }
 }

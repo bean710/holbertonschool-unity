@@ -1,0 +1,58 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PauseMenu : MonoBehaviour
+{
+    public GameObject pauseCanvas;
+
+    private bool paused = false;
+    private PlayerController pc;
+
+    private float myTime = 0.0F;
+    private float nextIn = 0.5F;
+
+    private Timer t;
+
+    void Start()
+    {
+        pc = GetComponent<PlayerController>();
+        Debug.Log("Loaded");
+
+        t = GetComponent<Timer>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        myTime += Time.deltaTime;
+
+        if (Input.GetButton("Pause") && myTime > nextIn)
+        {
+            nextIn = myTime + 0.5F;
+
+            if (!paused)
+                Pause();
+            else
+                Resume();
+        }
+    }
+    
+    public void Pause()
+    {
+        paused = true;
+        pauseCanvas.SetActive(true);
+        pc.TogglePause();
+        t.ToggleState();
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void Resume()
+    {
+        paused = false;
+        pauseCanvas.SetActive(false);
+        pc.TogglePause();
+        t.ToggleState();
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+}

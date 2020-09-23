@@ -13,6 +13,8 @@ public class CameraController : MonoBehaviour
     private float curX = 0f;
     private float curY = 0f;
 
+    private bool paused = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,9 @@ public class CameraController : MonoBehaviour
 
     // Update is called once per frame
     private void LateUpdate() {
+        if (paused)
+            return;
+
         curX += Input.GetAxis("Mouse X") * sensitivity;
         curY += Input.GetAxis("Mouse Y") * sensitivity;
 
@@ -35,5 +40,10 @@ public class CameraController : MonoBehaviour
         transform.position = player.transform.position + rotation * direction;
 
         transform.LookAt(player.transform.position);
+    }
+
+    public void TogglePause()
+    {
+        paused = !paused;
     }
 }
