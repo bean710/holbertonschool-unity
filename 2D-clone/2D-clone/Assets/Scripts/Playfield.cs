@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Playfield : MonoBehaviour
 {
+    public static int levelNum = 0;
     public static int w = 10;
     public static int h = 20;
     public static Transform[,] playspace = new Transform[w, h];
@@ -12,6 +13,7 @@ public class Playfield : MonoBehaviour
 
     private static bool needNew = true;
     private static bool gameOver = false;
+    private static int linesClearedThisLevel = 0;
 
     private static List<int> bag = new List<int>();
     private static Tetromino upNext = null;
@@ -49,6 +51,7 @@ public class Playfield : MonoBehaviour
             index = bag[bagIndex];
             bag.RemoveAt(bagIndex);
             upNext = Instantiate(Tetrominos[index], new Vector3(-10, 14, 0), Quaternion.identity);
+            upNext.speed = levelNum + 1;
         }
 
         upNext.transform.position = new Vector3(5, 17, 0);
@@ -57,6 +60,7 @@ public class Playfield : MonoBehaviour
         {
             Destroy(upNext.transform.gameObject);
             gameOver = true;
+            Scoring.GameOver();
         }
 
         if (bag.Count == 0)
@@ -70,11 +74,22 @@ public class Playfield : MonoBehaviour
         bag.RemoveAt(bagIndex);
 
         upNext = Instantiate(Tetrominos[index], new Vector3(-10, 14, 0), Quaternion.identity);
+        upNext.speed = levelNum + 1;
+    }
+    
+    public static void NextLevel()
+    {
+        ClearField();
+        Scoring.IncLevel();
+        linesClearedThisLevel = 0;
+        levelNum += 1;
     }
 
     // Checks for a full row in the playspace and removes full rows
     public static void CheckRows()
     {
+        int rowsCleared = 0;
+
         for (int i = 0; i < h; i++)
         {
             bool empty = false;
@@ -119,8 +134,33 @@ public class Playfield : MonoBehaviour
                         break;
                 }
 
+                rowsCleared += 1;
                 i--;
             }
+        }
+
+        switch (rowsCleared)
+        {
+            case 1:
+                Scoring.AddPoints(40 * (levelNum + 1));
+                break;
+            case 2:
+                Scoring.AddPoints(100 * (levelNum + 1));
+                break;
+            case 3:
+                Scoring.AddPoints(300 * (levelNum + 1));
+                break;
+            case 4:
+                Scoring.AddPoints(1200 * (levelNum + 1));
+                break;
+            default:
+                break;
+        }
+
+        linesClearedThisLevel += rowsCleared;
+        if (linesClearedThisLevel >= levelNum * 10 + 10)
+        {
+            NextLevel();
         }
     }
 
@@ -162,6 +202,21 @@ public class Playfield : MonoBehaviour
         return ((int)pos.x >= 0 &&
                 (int)pos.x < w &&
                 (int)pos.y >= 0);
+    }
+
+    public static void ClearField()
+    {
+        for (uint i = 0; i < h; i++)
+        {
+            for (uint j = 0; j < w; j++)
+            {
+                if (playspace[j, i] != null)
+                {
+                    Destroy(playspace[j, i].gameObject);
+                    playspace[j, i] = null;
+                }
+            }
+        }
     }
 
     // Rounds a 2D vector (position) to the nearest whole coordinates

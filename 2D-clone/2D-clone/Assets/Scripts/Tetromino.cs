@@ -13,6 +13,9 @@ public class Tetromino : MonoBehaviour
 
     private Tetromino ghost = null;
 
+    private bool leftPress = false;
+    private bool rightPress = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -143,6 +146,11 @@ public class Tetromino : MonoBehaviour
             }
 
             ghost.transform.position = oldPos;
+            
+            foreach (Transform mino in ghost.transform)
+            {
+                mino.rotation = Quaternion.identity;
+            }
         }
     }
 
