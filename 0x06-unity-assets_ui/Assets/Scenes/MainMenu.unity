@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 617d9be015db68348a623b01ea51a8c5, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1143,7 +1143,7 @@ PrefabInstance:
     - target: {fileID: 7043302648818367508, guid: 0e53ee9ea7e10c24786adb89a3c6743a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -250
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7043302648818367508, guid: 0e53ee9ea7e10c24786adb89a3c6743a,
         type: 3}
@@ -1163,7 +1163,7 @@ PrefabInstance:
     - target: {fileID: 7043302648818367508, guid: 0e53ee9ea7e10c24786adb89a3c6743a,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7043302648818367508, guid: 0e53ee9ea7e10c24786adb89a3c6743a,
         type: 3}
@@ -1173,7 +1173,7 @@ PrefabInstance:
     - target: {fileID: 7043302648818367508, guid: 0e53ee9ea7e10c24786adb89a3c6743a,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7043302648818367508, guid: 0e53ee9ea7e10c24786adb89a3c6743a,
         type: 3}
@@ -1257,7 +1257,7 @@ PrefabInstance:
     - target: {fileID: 4891991685138557872, guid: f636103504e6d8648856075f0a49b243,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -250
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4891991685138557872, guid: f636103504e6d8648856075f0a49b243,
         type: 3}
@@ -1277,7 +1277,7 @@ PrefabInstance:
     - target: {fileID: 4891991685138557872, guid: f636103504e6d8648856075f0a49b243,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4891991685138557872, guid: f636103504e6d8648856075f0a49b243,
         type: 3}
@@ -1287,7 +1287,7 @@ PrefabInstance:
     - target: {fileID: 4891991685138557872, guid: f636103504e6d8648856075f0a49b243,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4891991685138557872, guid: f636103504e6d8648856075f0a49b243,
         type: 3}
