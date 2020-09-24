@@ -18,4 +18,10 @@ public class MainMenu : MonoBehaviour
     {
         SceneChanger.ChangeScene("Options");
     }
+
+    public void Quit()
+    {
+        Debug.Log("Exited");
+        Application.Quit();
+    }
 }
