@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - SceneChanger
+  - Settings
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     public void LevelSelect(int level)
     {
         SceneChanger.ChangeScene(levelNames[level - 1]);
+        Debug.Log("Changing level");
     }
 
     public void Options()
