@@ -55,4 +55,19 @@ public class PauseMenu : MonoBehaviour
         t.ToggleState();
         Cursor.lockState = CursorLockMode.Locked;
     }
+
+    public void Restart()
+    {
+        SceneChanger.ChangeScene(SceneChanger.CurrentScene());
+    }
+
+    public void MainMenu()
+    {
+        SceneChanger.ChangeScene("MainMenu");
+    }
+
+    public void Options()
+    {
+        SceneChanger.ChangeScene("Options");
+    }
 }

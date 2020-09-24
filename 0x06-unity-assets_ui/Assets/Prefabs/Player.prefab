@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: -2608078731784739823}
   - component: {fileID: 7721152453653176640}
   - component: {fileID: 4163040792840888165}
+  - component: {fileID: 1491073968775989101}
+  - component: {fileID: 1491073968775989100}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -95,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cam: {fileID: 0}
-  Speed: 6
+  Speed: 10
   JumpHeight: 2
 --- !u!54 &7721152453653176640
 Rigidbody:
@@ -127,3 +129,29 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1491073968775989101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028618923003670824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 864f5593d32e4054abfe46b0c200e262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseCanvas: {fileID: 0}
+--- !u!114 &1491073968775989100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028618923003670824}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da5ec8aa82eca54fb46ebcb2f3e88ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimerText: {fileID: 0}

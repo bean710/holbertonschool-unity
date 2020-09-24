@@ -27,4 +27,9 @@ public class SceneChanger : MonoBehaviour
         lastScene = swap;
         SceneManager.LoadScene(currentScene);
     }
+
+    public static string CurrentScene()
+    {
+        return currentScene;
+    }
 }

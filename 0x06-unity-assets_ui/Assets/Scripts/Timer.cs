@@ -34,6 +34,9 @@ public class Timer : MonoBehaviour
 
     public void ToggleState()
     {
+        if (sw == null)
+            return;
+
         if (paused)
         {
             paused = false;
