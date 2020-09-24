@@ -9,9 +9,12 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public GameObject TimerText;
+    public GameObject FinalTime;
+    public GameObject WinCanvas;
 
     private Stopwatch sw;
     private Text text;
+    private Text ftText;
 
     private bool paused = false;
 
@@ -21,6 +24,7 @@ public class Timer : MonoBehaviour
         sw = new Stopwatch();
 
         text = TimerText.GetComponent<Text>();
+        ftText = FinalTime.GetComponent<Text>();
 
         sw.Start();
     }
@@ -47,5 +51,12 @@ public class Timer : MonoBehaviour
             paused = true;
             sw.Stop();
         }
+    }
+
+    public void Win()
+    {
+        WinCanvas.SetActive(true);
+        ftText.text = text.text;
+        //text.text = "";
     }
 }
