@@ -7,6 +7,8 @@ public class CameraController : MonoBehaviour
     public GameObject player;
     public float sensitivity = 2.0f;
 
+    public bool isInverted = false;
+
     private Vector3 offset;
     private float distance;
 
@@ -29,7 +31,7 @@ public class CameraController : MonoBehaviour
             return;
 
         curX += Input.GetAxis("Mouse X") * sensitivity;
-        curY += Input.GetAxis("Mouse Y") * sensitivity;
+        curY += Input.GetAxis("Mouse Y") * sensitivity * (isInverted ? -1 : 1);
 
         //curX = Mathf.Clamp(curX, 89, -89);
         curY = Mathf.Clamp(curY, -7f, 89.9f);
