@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public GameObject Cam;
     public float Speed = 6f;
     public float JumpHeight = 2f;
+    public float RotateSpeed = 2f;
 
     private Rigidbody body;
     private Vector3 movement;
@@ -39,13 +40,18 @@ public class PlayerController : MonoBehaviour
         float Horizontal = Input.GetAxis("Horizontal");
         float Vertical = Input.GetAxis("Vertical");
 
+        /**
         Quaternion newRotation = Cam.transform.rotation;
         newRotation.z = 0;
         newRotation.x = 0;
 
         transform.rotation = newRotation;
+        **/
 
-        Vector3 newMove = transform.right * Horizontal + transform.forward * Vertical;
+        transform.Rotate(0f, Horizontal * RotateSpeed, 0f);
+
+        //Vector3 newMove = transform.right * Horizontal + transform.forward * Vertical;
+        Vector3 newMove = transform.forward * Vertical;
 
         if (Input.GetButtonDown("Jump") && cols > 0)
         {
