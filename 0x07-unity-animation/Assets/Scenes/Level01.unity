@@ -10313,7 +10313,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abbc014f6226a154686be317cfaed70f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextObj: {fileID: 1228274816}
   PlayerObj: {fileID: 1491073968775989093}
 --- !u!4 &754300707 stripped
 Transform:
@@ -14403,6 +14402,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfd71611720260346920e9b33e19457a, type: 3}
+--- !u!1 &1127836557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: dc8406f42dc299d43ba689a4f04078ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 1242949073}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1130187926 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: b30ca052aede1c34aab2a055d4c942de,
@@ -15674,6 +15679,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 53f90f77e40baf84f947f9b7e6ebc80b, type: 2}
+    - target: {fileID: 5866666021909216657, guid: dc8406f42dc299d43ba689a4f04078ba,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc8406f42dc299d43ba689a4f04078ba, type: 3}
 --- !u!1001 &1247508323
@@ -25442,6 +25452,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2608078731784739823, guid: 3f2291b087dab6341a5bcd28c8c3d144,
+        type: 3}
+      propertyPath: PlayerModel
+      value: 
+      objectReference: {fileID: 1127836557}
     - target: {fileID: 382397825307823185, guid: 3f2291b087dab6341a5bcd28c8c3d144,
         type: 3}
       propertyPath: m_Enabled

@@ -15,6 +15,7 @@ public class Timer : MonoBehaviour
     private Stopwatch sw;
     private Text text;
     private Text ftText;
+    private CameraController CC;
 
     private bool paused = false;
 
@@ -25,6 +26,8 @@ public class Timer : MonoBehaviour
 
         text = TimerText.GetComponent<Text>();
         ftText = FinalTime.GetComponent<Text>();
+
+        CC = GameObject.Find("Main Camera").GetComponent<CameraController>();
 
         sw.Start();
     }
@@ -55,8 +58,11 @@ public class Timer : MonoBehaviour
 
     public void Win()
     {
+        CC.TogglePause();
         WinCanvas.SetActive(true);
         ftText.text = text.text;
-        //text.text = "";
+        text.fontSize = 60;
+        text.color = Color.green;
+        text.text = "";
     }
 }
