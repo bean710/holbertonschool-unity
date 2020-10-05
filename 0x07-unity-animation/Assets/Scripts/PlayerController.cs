@@ -67,54 +67,17 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Running", false);
         }
 
-        /**
-        if (Vertical != 0f)
-        {
-            Quaternion newRotation = Cam.transform.rotation;
-
-            if (Horizontal != 0)
-            {
-                float lrRotation = 0f;
-                lrRotation = (Horizontal > 0 ? 1 : -1);
-                float fbRotation = (Vertical > 0 ? 0 : 1);
-                float dir = ((newRotation.eulerAngles.y) * 2 + 90 * lrRotation) / 2;
-                newRotation.eulerAngles = new Vector3(0, dir, 0);
-                transform.rotation = newRotation;
-                newMove = transform.forward * Mathf.Abs(Vertical);
-            }
-            else
-            {
-                newRotation.eulerAngles = new Vector3(0, newRotation.eulerAngles.y + 180 * (Vertical > 0 ? 0 : 1), 0);
-                transform.rotation = newRotation;
-                newMove = transform.forward * Mathf.Abs(Vertical);
-            }
-        }
-        else if (Horizontal != 0f)
-        {
-            Quaternion newRotation = Cam.transform.rotation;
-            float dir = (Horizontal > 0 ? 1 : -1) * 90 + newRotation.eulerAngles.y;
-            newRotation.eulerAngles = new Vector3(0, dir, 0);
-            transform.rotation = newRotation;
-            newMove = transform.forward * Mathf.Abs(Horizontal);
-        }
-        **/
-
-        /**
-        Quaternion newRotation = Cam.transform.rotation;
-        newRotation.z = 0;
-        newRotation.x = 0;
-
-        transform.rotation = newRotation;
-        **/
-
-        //transform.Rotate(0f, Horizontal * RotateSpeed, 0f);
-
-        //Vector3 newMove = transform.right * Horizontal + transform.forward * Vertical;
-
         if (Input.GetButtonDown("Jump") && cols > 0)
         {
+            anim.SetBool("Jumping", true);
             body.AddForce(Vector3.up * Mathf.Sqrt(JumpHeight * -2f * Physics.gravity.y), ForceMode.VelocityChange);
         }
+        else
+        {
+            anim.SetBool("Jumping", false);
+        }
+
+        anim.SetBool("Falling", body.velocity.y < -12);
 
         body.MovePosition(body.position + newMove * Speed * Time.deltaTime);
     }
@@ -129,7 +92,7 @@ public class PlayerController : MonoBehaviour
 
     private void CheckFall()
     {
-        if (transform.position.y < -30)
+        if (transform.position.y < -40)
         {
             transform.position = new Vector3(0, 50, 0);
         }
