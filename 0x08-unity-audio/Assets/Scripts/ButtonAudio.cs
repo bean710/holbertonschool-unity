@@ -4,17 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ButtonAudio : MonoBehaviour, IPointerEnterHandler
+public class ButtonAudio : MonoBehaviour, IPointerEnterHandler, IPointerDownHandler
 {
-    public AudioSource hover;
+    public AudioSource hoverSound;
+    public AudioSource clickSound;
 
-    public void MouseEnter() {
-        Debug.Log("Foo");
-        hover.Play();
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        clickSound.Play();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        hover.Play();
+        hoverSound.Play();
     }
 }
