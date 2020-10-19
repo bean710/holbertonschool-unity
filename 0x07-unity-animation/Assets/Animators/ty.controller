@@ -142,14 +142,14 @@ AnimatorStateMachine:
     m_Position: {x: 350, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2506725001008274836}
-    m_Position: {x: 330, y: 290, z: 0}
+    m_Position: {x: 380, y: 320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8150828095065584471}
-    m_Position: {x: 678, y: 198, z: 0}
+    m_Position: {x: 830, y: 460, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: 7347728014646347360}
-    m_Position: {x: 50, y: 500, z: 0}
+    m_Position: {x: 60, y: 490, z: 0}
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
@@ -323,7 +323,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ty.controller
+  m_Name: ty
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Running
