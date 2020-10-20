@@ -7,6 +7,9 @@ public class WinTrigger : MonoBehaviour
 {
     public GameObject PlayerObj;
 
+    public AudioSource backgroundMusic;
+    public AudioSource winMusic;
+
     private Timer timer;
 
     // Start is called before the first frame update
@@ -22,6 +25,10 @@ public class WinTrigger : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
+        if (backgroundMusic.isPlaying)
+            backgroundMusic.Stop();
+        winMusic.Play();
+
         Cursor.lockState = CursorLockMode.None;
         timer.enabled = false;
         timer.Win();
