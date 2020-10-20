@@ -11,10 +11,14 @@ public class PlayerController : MonoBehaviour
 
     public GameObject PlayerModel;
 
+    public AudioSource grassRunning;
+    public AudioSource stoneRunning;
+
     private Rigidbody body;
     private Vector3 movement;
 
     private uint cols = 0;
+    private uint stoneCols = 0;
 
     private bool paused = false;
 
@@ -61,10 +65,36 @@ public class PlayerController : MonoBehaviour
             newMove = transform.forward * totSpeed;
 
             anim.SetBool("Running", true);
+
+            if (stoneCols > 0)
+            {
+                if (grassRunning.isPlaying)
+                    grassRunning.Stop();
+
+                if (!stoneRunning.isPlaying)
+                    stoneRunning.Play();
+            }
+            else
+            {
+                if (stoneRunning.isPlaying)
+                    stoneRunning.Stop();
+
+                if (!grassRunning.isPlaying)
+                    grassRunning.Play();
+            }
         }
         else
         {
             anim.SetBool("Running", false);
+        }
+
+        if (cols == 0 || totSpeed == 0)
+        {
+            if (stoneRunning.isPlaying)
+                stoneRunning.Stop();
+
+            if (grassRunning.isPlaying)
+                grassRunning.Stop();
         }
 
         if (Input.GetButtonDown("Jump") && cols > 0)
@@ -83,10 +113,14 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
+        if (other.gameObject.tag == "Stone")
+            stoneCols += 1;
         cols += 1;
     }
 
     private void OnCollisionExit(Collision other) {
+        if (other.gameObject.tag == "Stone")
+            stoneCols -= 1;
         cols -= 1;
     }
 
