@@ -13,12 +13,16 @@ public class PlayerController : MonoBehaviour
 
     public AudioSource grassRunning;
     public AudioSource stoneRunning;
+    public AudioSource grassFall;
+    public AudioSource stoneFall;
 
     private Rigidbody body;
     private Vector3 movement;
 
     private uint cols = 0;
     private uint stoneCols = 0;
+
+    private bool falling = false;
 
     private bool paused = false;
 
@@ -107,7 +111,8 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Jumping", false);
         }
 
-        anim.SetBool("Falling", body.velocity.y < -12);
+        falling = body.velocity.y < -12;
+        anim.SetBool("Falling", falling);
 
         body.MovePosition(body.position + newMove * Speed * Time.deltaTime);
     }
@@ -116,6 +121,15 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Stone")
             stoneCols += 1;
         cols += 1;
+
+        if (falling) // Collisions run before the update loop which would switch this variable
+        {
+            Debug.Log("Playing");
+            if (stoneCols > 0)
+                stoneFall.Play();
+            else
+                grassFall.Play();
+        }
     }
 
     private void OnCollisionExit(Collision other) {
