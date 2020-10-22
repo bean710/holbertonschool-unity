@@ -674,6 +674,7 @@ MonoBehaviour:
   - Level01
   - Level02
   - Level03
+  mixer: {fileID: 24100000, guid: 3b03bf8e8d5fa984d9646101517265b6, type: 2}
 --- !u!1 &882585212
 GameObject:
   m_ObjectHideFlags: 0

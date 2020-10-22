@@ -132,6 +132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naturePack_060 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f14de2ab2136d0f41bda30388b851607, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f14de2ab2136d0f41bda30388b851607, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.489414
@@ -216,6 +220,102 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8484625}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &8484629
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8484626}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6f4e1b635a5619044a0488af92450009, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 28.17
+  MaxDistance: 49.62
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.56771463
+      value: 1
+      inSlope: -1.76215
+      outSlope: -1.76215
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0.050060213
+      inSlope: -0.56794137
+      outSlope: -0.56794137
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &31117727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: fb5feadadaae0e3458b32957e18d43d6,
@@ -232,6 +332,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 7b890c2408f392241a25d8720e198c50, type: 3}
       propertyPath: m_Name
       value: naturePack_023 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 7b890c2408f392241a25d8720e198c50, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7b890c2408f392241a25d8720e198c50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -301,6 +405,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
       propertyPath: m_Name
       value: naturePack_024 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
       propertyPath: m_LocalPosition.x
@@ -397,6 +505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naturePack_023 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 7b890c2408f392241a25d8720e198c50, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7b890c2408f392241a25d8720e198c50, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.232727
@@ -491,6 +603,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
       propertyPath: m_Name
       value: naturePack_024 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
       propertyPath: m_LocalPosition.x
@@ -640,6 +756,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naturePack_024 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.081887
@@ -708,6 +828,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 0779e5d1277806848b714d6a6f32c6c6, type: 3}
       propertyPath: m_Name
       value: naturePack_010 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 0779e5d1277806848b714d6a6f32c6c6, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 0779e5d1277806848b714d6a6f32c6c6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -786,6 +910,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naturePack_024 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.2608423
@@ -855,6 +983,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naturePack_024 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.1
@@ -913,6 +1045,80 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
+--- !u!1001 &213588192
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7200403238860769966, guid: d3db739081d91934099d6a0fee023b1f,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7963643294630891434, guid: d3db739081d91934099d6a0fee023b1f,
+        type: 3}
+      propertyPath: m_Name
+      value: MenuSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 7963643294630891435, guid: d3db739081d91934099d6a0fee023b1f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.25777
+      objectReference: {fileID: 0}
+    - target: {fileID: 7963643294630891435, guid: d3db739081d91934099d6a0fee023b1f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -115.30617
+      objectReference: {fileID: 0}
+    - target: {fileID: 7963643294630891435, guid: d3db739081d91934099d6a0fee023b1f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 27.454063
+      objectReference: {fileID: 0}
+    - target: {fileID: 7963643294630891435, guid: d3db739081d91934099d6a0fee023b1f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7963643294630891435, guid: d3db739081d91934099d6a0fee023b1f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7963643294630891435, guid: d3db739081d91934099d6a0fee023b1f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7963643294630891435, guid: d3db739081d91934099d6a0fee023b1f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7963643294630891435, guid: d3db739081d91934099d6a0fee023b1f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7963643294630891435, guid: d3db739081d91934099d6a0fee023b1f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7963643294630891435, guid: d3db739081d91934099d6a0fee023b1f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7963643294630891435, guid: d3db739081d91934099d6a0fee023b1f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d3db739081d91934099d6a0fee023b1f, type: 3}
 --- !u!4 &280879595 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 7e1f28ae88641364ea73b07b4c7dcfe6,
@@ -929,6 +1135,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
       propertyPath: m_Name
       value: naturePack_024 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
       propertyPath: m_LocalPosition.x
@@ -998,6 +1208,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 50d221c6c065e65429c2e7480e0f1030, type: 3}
       propertyPath: m_Name
       value: naturePack_152 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 50d221c6c065e65429c2e7480e0f1030, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 50d221c6c065e65429c2e7480e0f1030, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1119,6 +1333,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naturePack_045 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: fb5feadadaae0e3458b32957e18d43d6, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: fb5feadadaae0e3458b32957e18d43d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
@@ -1210,6 +1428,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naturePack_027 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: bf1c40229ecaee34caed2b245ab035b6, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: bf1c40229ecaee34caed2b245ab035b6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.048005104
@@ -1292,6 +1514,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 932eaa682e3b6084b83c6297eeceb983, type: 3}
       propertyPath: m_Name
       value: naturePack_131 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 932eaa682e3b6084b83c6297eeceb983, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 932eaa682e3b6084b83c6297eeceb983, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1562,6 +1788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naturePack_flat_005 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 8cbfa08be247abf409f09a70468aa6dc, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 8cbfa08be247abf409f09a70468aa6dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.642098
@@ -1618,6 +1848,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 7d4b553096a5dbc4fb507ab1a1b0486a, type: 3}
       propertyPath: m_Name
       value: naturePack_102
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 7d4b553096a5dbc4fb507ab1a1b0486a, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7d4b553096a5dbc4fb507ab1a1b0486a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1702,6 +1936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naturePack_024 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.8362875
@@ -1770,6 +2008,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 07e446560dc44e541baace5cb250c866, type: 3}
       propertyPath: m_Name
       value: naturePack_032
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 07e446560dc44e541baace5cb250c866, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 07e446560dc44e541baace5cb250c866, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1853,6 +2095,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 7e1f28ae88641364ea73b07b4c7dcfe6, type: 3}
       propertyPath: m_Name
       value: naturePack_043 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 7e1f28ae88641364ea73b07b4c7dcfe6, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7e1f28ae88641364ea73b07b4c7dcfe6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2233,6 +2479,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerObj: {fileID: 1491073968775989093}
+  backgroundMusic: {fileID: 881904441}
+  winMusic: {fileID: 881904440}
 --- !u!1 &775409535 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7695973832181114104, guid: 1a58a1cd92b8fdc4397b4047fe111ae1,
@@ -2265,6 +2513,128 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 798fbd8e40ae08946840d1acddba5cef, type: 3}
+--- !u!1001 &881904433
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3051474539075040692, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.499971
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051474539075040692, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.0000534
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051474539075040692, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 123.82085
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051474539075040692, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051474539075040692, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051474539075040692, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051474539075040692, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051474539075040692, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051474539075040692, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051474539075040692, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051474539075040692, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051474539075040693, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051474540722637565, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 371ac05d8af1ed544878c9d6d14282bb, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 50c02741c23e56e4597a9a84b1bc01e5, type: 3}
+--- !u!82 &881904434 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3777617724167437248, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 881904433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &881904435 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 227530634283868602, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 881904433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &881904436 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3051474539407466050, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 881904433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &881904437 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3051474540852915617, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 881904433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &881904438 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3051474540071008005, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 881904433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &881904439 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3051474539829473704, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 881904433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &881904440 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3051474539136798837, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 881904433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &881904441 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3051474540722637565, guid: 50c02741c23e56e4597a9a84b1bc01e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 881904433}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &942774919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2275,6 +2645,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
       propertyPath: m_Name
       value: naturePack_024 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2481,6 +2855,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 20da69bd152db6e469c2b55ea8d39f44, type: 3}
       propertyPath: m_Name
       value: naturePack_029
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 20da69bd152db6e469c2b55ea8d39f44, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 20da69bd152db6e469c2b55ea8d39f44, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2708,6 +3086,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naturePack_flat_005
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 8cbfa08be247abf409f09a70468aa6dc, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 8cbfa08be247abf409f09a70468aa6dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.402099
@@ -2764,6 +3146,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 0954bd92817da104caa16539d7ab19ad, type: 3}
       propertyPath: m_Name
       value: naturePack_033
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 0954bd92817da104caa16539d7ab19ad, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 0954bd92817da104caa16539d7ab19ad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2853,6 +3239,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 7e1f28ae88641364ea73b07b4c7dcfe6, type: 3}
       propertyPath: m_Name
       value: naturePack_043 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 7e1f28ae88641364ea73b07b4c7dcfe6, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7e1f28ae88641364ea73b07b4c7dcfe6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3064,6 +3454,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
       propertyPath: m_Name
       value: naturePack_024 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3360,6 +3754,46 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1394906861}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1394906864 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1418720438050493896, guid: 66bac56687a3b3f48a7bd5407ed7a0d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1394906861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1394906865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1418720437243745798, guid: 66bac56687a3b3f48a7bd5407ed7a0d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1394906861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1394906866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394906864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa592fe75394024eb4fcc04aa8c7c75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 881904435}
+  clickSound: {fileID: 881904434}
+--- !u!114 &1394906867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394906865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa592fe75394024eb4fcc04aa8c7c75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 881904435}
+  clickSound: {fileID: 881904434}
 --- !u!1001 &1395862723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3370,6 +3804,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: 70ec2981ed0356a43a979b204f2f73d2, type: 3}
       propertyPath: m_Name
       value: naturePack_039
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 70ec2981ed0356a43a979b204f2f73d2, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 70ec2981ed0356a43a979b204f2f73d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3454,6 +3892,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naturePack_023 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 7b890c2408f392241a25d8720e198c50, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7b890c2408f392241a25d8720e198c50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.2343836
@@ -3523,6 +3965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naturePack_024 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.2
@@ -3591,6 +4037,10 @@ PrefabInstance:
     - target: {fileID: 100002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
       propertyPath: m_Name
       value: naturePack_024 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
+      propertyPath: m_TagString
+      value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6c3959e91c55d44eaa6f43e25cfc392, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3848,6 +4298,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: naturePack_flat_006
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: f48f1a27c7f82ce4d8fcc66f66945006, type: 3}
+      propertyPath: m_TagString
+      value: Stone
+      objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: f48f1a27c7f82ce4d8fcc66f66945006, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.518652
@@ -3960,6 +4414,46 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Restart
       objectReference: {fileID: 0}
+    - target: {fileID: 277633178496385956, guid: ee2395d71386b6244a33ea010b673305,
+        type: 3}
+      propertyPath: hoverSound
+      value: 
+      objectReference: {fileID: 881904435}
+    - target: {fileID: 277633178496385956, guid: ee2395d71386b6244a33ea010b673305,
+        type: 3}
+      propertyPath: clickSound
+      value: 
+      objectReference: {fileID: 881904434}
+    - target: {fileID: 277633178496385957, guid: ee2395d71386b6244a33ea010b673305,
+        type: 3}
+      propertyPath: hoverSound
+      value: 
+      objectReference: {fileID: 881904435}
+    - target: {fileID: 277633178496385957, guid: ee2395d71386b6244a33ea010b673305,
+        type: 3}
+      propertyPath: clickSound
+      value: 
+      objectReference: {fileID: 881904434}
+    - target: {fileID: 277633178496385958, guid: ee2395d71386b6244a33ea010b673305,
+        type: 3}
+      propertyPath: hoverSound
+      value: 
+      objectReference: {fileID: 881904435}
+    - target: {fileID: 277633178496385958, guid: ee2395d71386b6244a33ea010b673305,
+        type: 3}
+      propertyPath: clickSound
+      value: 
+      objectReference: {fileID: 881904434}
+    - target: {fileID: 277633178820371896, guid: ee2395d71386b6244a33ea010b673305,
+        type: 3}
+      propertyPath: hoverSound
+      value: 
+      objectReference: {fileID: 881904435}
+    - target: {fileID: 277633178820371896, guid: ee2395d71386b6244a33ea010b673305,
+        type: 3}
+      propertyPath: clickSound
+      value: 
+      objectReference: {fileID: 881904434}
     - target: {fileID: 277633179691656696, guid: ee2395d71386b6244a33ea010b673305,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4271,6 +4765,26 @@ PrefabInstance:
       propertyPath: Cam
       value: 
       objectReference: {fileID: 963194225}
+    - target: {fileID: -2608078731784739823, guid: 3f2291b087dab6341a5bcd28c8c3d144,
+        type: 3}
+      propertyPath: grassRunning
+      value: 
+      objectReference: {fileID: 881904439}
+    - target: {fileID: -2608078731784739823, guid: 3f2291b087dab6341a5bcd28c8c3d144,
+        type: 3}
+      propertyPath: stoneRunning
+      value: 
+      objectReference: {fileID: 881904438}
+    - target: {fileID: -2608078731784739823, guid: 3f2291b087dab6341a5bcd28c8c3d144,
+        type: 3}
+      propertyPath: grassFall
+      value: 
+      objectReference: {fileID: 881904437}
+    - target: {fileID: -2608078731784739823, guid: 3f2291b087dab6341a5bcd28c8c3d144,
+        type: 3}
+      propertyPath: stoneFall
+      value: 
+      objectReference: {fileID: 881904436}
     - target: {fileID: 18645966738320670, guid: 3f2291b087dab6341a5bcd28c8c3d144,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -4566,6 +5080,12 @@ PrefabInstance:
       propertyPath: pauseCanvas
       value: 
       objectReference: {fileID: 1079896099}
+    - target: {fileID: 1491073968775989101, guid: 3f2291b087dab6341a5bcd28c8c3d144,
+        type: 3}
+      propertyPath: mixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 3b03bf8e8d5fa984d9646101517265b6,
+        type: 2}
     - target: {fileID: 1575276835472237638, guid: 3f2291b087dab6341a5bcd28c8c3d144,
         type: 3}
       propertyPath: m_LocalRotation.x
