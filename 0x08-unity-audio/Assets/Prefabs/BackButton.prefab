@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 3421901449790942535}
   - component: {fileID: 3421901449790942534}
   - component: {fileID: 3421901449790942533}
+  - component: {fileID: 3421901450045814758}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -199,4 +200,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3421901449790942534}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3421901450045814758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3421901449790942587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa592fe75394024eb4fcc04aa8c7c75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 0}
+  clickSound: {fileID: 0}

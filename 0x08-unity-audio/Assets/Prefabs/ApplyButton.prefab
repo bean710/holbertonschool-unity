@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4551782542265053438}
   - component: {fileID: 3141468638662381193}
   - component: {fileID: 5673944491915436253}
+  - component: {fileID: 1361423940509408101}
   m_Layer: 5
   m_Name: ApplyButton
   m_TagString: Untagged
@@ -121,7 +122,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3141468638662381193}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: Apply
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1361423940509408101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4037330884776709075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa592fe75394024eb4fcc04aa8c7c75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 0}
+  clickSound: {fileID: 0}
 --- !u!1 &8500833061794478737
 GameObject:
   m_ObjectHideFlags: 0

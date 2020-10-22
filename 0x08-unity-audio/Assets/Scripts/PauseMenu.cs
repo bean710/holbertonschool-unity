@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseCanvas;
+    public AudioMixer mixer;
 
     private bool paused = false;
     private PlayerController pc;
@@ -44,6 +46,9 @@ public class PauseMenu : MonoBehaviour
         pauseCanvas.SetActive(true);
         pc.TogglePause();
         t.ToggleState();
+        float curVal;
+        mixer.GetFloat("BGMVolume", out curVal);
+        mixer.SetFloat("BGMVolume", curVal - 15f);
         Cursor.lockState = CursorLockMode.None;
     }
 
@@ -53,6 +58,9 @@ public class PauseMenu : MonoBehaviour
         pauseCanvas.SetActive(false);
         pc.TogglePause();
         t.ToggleState();
+        float curVal;
+        mixer.GetFloat("BGMVolume", out curVal);
+        mixer.SetFloat("BGMVolume", curVal + 15f);
         Cursor.lockState = CursorLockMode.Locked;
     }
 
