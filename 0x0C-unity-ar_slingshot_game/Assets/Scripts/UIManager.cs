@@ -8,8 +8,12 @@ using System;
 public class UIManager : MonoBehaviour
 {
     public ARPlaneManager arPlaneManager;
+    public SlingshotManager slingshotManager;
     public Text promptText;
     public Image promptPanel;
+
+    public Text pointsText;
+    public List<Image> ammoImages;
 
     private bool planeDetected = false;
 
@@ -42,5 +46,28 @@ public class UIManager : MonoBehaviour
     {
         promptPanel.color = new Color32(0, 255, 0, 60);
         promptText.text = "Plane selected!";
+
+        StartCoroutine(CloseSelectionDisplay(3f));
+    }
+
+    IEnumerator CloseSelectionDisplay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        Debug.Log("Calling load ammo");
+        slingshotManager.LoadAmmo();
+
+        promptPanel.color = new Color32(255, 255, 255, 60);
+        promptText.text = "Pull back on the ball to launch at the enemies!";
+    }
+
+    public void UseAmmo(int ammoLeft)
+    {
+        ammoImages[ammoLeft - 1].color = new Color32(255, 255, 255, 85);
+    }
+
+    public void ScorePoints(int points)
+    {
+        
     }
 }

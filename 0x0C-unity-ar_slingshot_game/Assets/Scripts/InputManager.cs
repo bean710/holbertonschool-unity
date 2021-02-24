@@ -12,6 +12,8 @@ public class InputManager : MonoBehaviour
 
     public UIManager uiManager;
 
+    public ARPlane plane = null;
+
     private List<ARRaycastHit> m_Hits = new List<ARRaycastHit>();
     private List<ARPlane> planes = new List<ARPlane>();
 
@@ -33,15 +35,15 @@ public class InputManager : MonoBehaviour
             return;
 
         Touch touch = Input.GetTouch(0);
-        Debug.Log("Detected Touch");
+        //Debug.Log("Detected Touch");
         if (arRaycastManager.Raycast(touch.position, m_Hits))
         {
-            Debug.Log("Hit Something");
+            //Debug.Log("Hit Something");
             ARRaycastHit hit = m_Hits[0];
             if ((hit.hitType & TrackableType.PlaneWithinPolygon) != 0)
             {
                 Debug.Log("First hit was plane");
-                ARPlane plane = arPlaneManager.GetPlane(hit.trackableId);
+                plane = arPlaneManager.GetPlane(hit.trackableId);
 
                 foreach (ARPlane onPlane in arPlaneManager.trackables)
                 {

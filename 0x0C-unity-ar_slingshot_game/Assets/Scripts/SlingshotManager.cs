@@ -6,6 +6,11 @@ public class SlingshotManager : MonoBehaviour
 {
     public GameObject camera;
     public GameObject ammoPrefab;
+    public TrajectoryManager trajectoryManager;
+    public UIManager uiManager;
+
+    public float verticalVelocity = 10f;
+    public float horizontalVelocity = 3f;
 
     private GameObject ammo;
     private Rigidbody ammoRB;
@@ -13,9 +18,13 @@ public class SlingshotManager : MonoBehaviour
     private Vector2 initialTouchPos;
     private Vector3 originalPos;
 
-    // Start is called before the first frame update
-    void Start()
+    private bool dragging = false;
+
+    public int ammoCount = 5;
+
+    public void LoadAmmo()
     {
+        Debug.Log("Loading Ammo");
         ammo = Instantiate(ammoPrefab, camera.transform);
         ammoRB = ammo.GetComponent<Rigidbody>();
 
@@ -28,7 +37,7 @@ public class SlingshotManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount < 1)
+        if (Input.touchCount < 1 || ammoCount == 0)
             return;
 
         Touch touch = Input.GetTouch(0);
@@ -36,25 +45,59 @@ public class SlingshotManager : MonoBehaviour
         if (touch.phase == TouchPhase.Began)
         {
             RaycastHit hit;
+            Ray ray = camera.GetComponent<Camera>().ScreenPointToRay(touch.position);
 
-            if (Physics.Raycast(touch.position, camera.transform.forward, out hit))
+            //Debug.DrawRay(ray.origin, ray.direction, Color.white, 5f);
+
+            if (Physics.Raycast(ray, out hit))
             {
+                Debug.Log("Hit something");
+                if (hit.transform.tag != "Ammo")
+                    return;
+
+                Debug.Log("Hit ammo");
+                dragging = true;
                 initialTouchPos = touch.position;
             }
         }
-        else if (touch.phase == TouchPhase.Moved)
+        else if (touch.phase == TouchPhase.Moved && dragging)
         {
-            ammo.transform.localPosition = originalPos + ((camera.transform.up * 2) * ((touch.position.y / Screen.height) - 0.5f) * 1.2f);
+            ammo.transform.localPosition = originalPos + ((camera.transform.up) * ((touch.position.y / Screen.height) - 0.5f));
+            Vector3 newVelocity = GetVelocity(touch);
+            trajectoryManager.Draw(ammo.transform.position, newVelocity);
         }
-        else if (touch.phase == TouchPhase.Ended)
+        else if (touch.phase == TouchPhase.Ended && dragging)
         {
             ammoRB.constraints = RigidbodyConstraints.None;
-            ammoRB.velocity = ((camera.transform.up + camera.transform.forward) * 10f * ((touch.position.y - initialTouchPos.y) / Screen.height));
+            Vector3 newVelocity = GetVelocity(touch);
+            ammoRB.velocity = newVelocity;
+            dragging = false;
+            trajectoryManager.Disable();
+            ammoCount--;
             //ammo.transform.localPosition = originalPos;
         }
         else if (touch.phase == TouchPhase.Canceled)
         {
-
+            dragging = false;
+            trajectoryManager.Disable();
         }
+        else if (dragging)
+        {
+            Vector3 newVelocity = GetVelocity(touch);
+            trajectoryManager.Draw(ammo.transform.position, newVelocity);
+        }
+        else
+        {
+            Debug.Log("Not Dragging");
+        }
+    }
+
+    Vector3 GetVelocity(Touch touch)
+    {
+        Vector3 direction = (-camera.transform.up * verticalVelocity) + (-camera.transform.forward * horizontalVelocity);
+        float stretchModifier = ((initialTouchPos.y - touch.position.y) / Screen.height) - 0.5f;
+        Vector3 finalVelocity = direction * stretchModifier;
+        
+        return (finalVelocity);
     }
 }
