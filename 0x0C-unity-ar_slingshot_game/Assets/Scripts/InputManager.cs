@@ -67,8 +67,7 @@ public class InputManager : MonoBehaviour
                 Debug.Log("Updated Line render");
 
                 arPlaneManager.enabled = false;
-                enemyManager.SetupPlane(plane);
-                uiManager.PlaneSelected();
+                uiManager.PlaneSelected(plane);
             }
         }
     }

@@ -5,28 +5,18 @@ using UnityEngine.XR.ARFoundation;
 
 public class EnemyManager : MonoBehaviour
 {
+    public UIManager uiManager;
+    
     public GameObject enemyPrefab;
 
     public int enemyNum = 5;
+    public int activeEnemies = 5;
 
-    private ARPlane plane = null;
+    public ARPlane plane = null;
     private float maxDimension;
     private float minDimension;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (plane != null)
-        {
-
-        }
-    }
+    private List<GameObject> enemies = new List<GameObject>();
 
     public void SetupPlane(ARPlane newPlane)
     {
@@ -39,6 +29,8 @@ public class EnemyManager : MonoBehaviour
         {
             Enemy enemy = Instantiate(enemyPrefab, plane.center + (new Vector3(0, 0.05f, 0)), Quaternion.identity).GetComponent<Enemy>();
             enemy.em = this;
+
+            enemies.Add(enemy.gameObject);
 
             float adjustedScale = minDimension / 10f;
             
@@ -60,13 +52,34 @@ public class EnemyManager : MonoBehaviour
         {
             newPos2d = new Vector2(plane.center.x, plane.center.z) + Random.insideUnitCircle * maxDimension;
             newPos = new Vector3(newPos2d.x, plane.center.y, newPos2d.y) + (Vector3.up * 10f);
+            /*
             Debug.Log("Getting destination");
             Debug.Log($"Center: {plane.center}, Size: {plane.size}");
             Debug.Log($"Position: {newPos}");
+            */
         }
 
         newPos = new Vector3(newPos.x, plane.center.y, newPos.z);
 
         return (newPos);
+    }
+
+    public void HitEnemy(GameObject enemy)
+    {
+        activeEnemies--;
+        Destroy(enemy);
+
+        if (activeEnemies == 0)
+            uiManager.GameOver();
+    }
+
+    public void Replay()
+    {
+        foreach (GameObject enemy in enemies)
+            Destroy(enemy);
+
+        enemies.Clear();
+
+        activeEnemies = enemyNum;
     }
 }

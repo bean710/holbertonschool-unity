@@ -30,7 +30,9 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate() {
         transform.position = Vector3.MoveTowards(transform.position, destination, speed);
+        /*
         Debug.Log("Moving");
         Debug.Log($"Enemy position: {transform.position}");
+        */
     }
 }
